@@ -1,0 +1,53 @@
+{% extends 'books/base.html' %}
+{% block title %}{{ book.title }} — NovelShelf{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-7">
+
+        <a href="{% url 'dashboard' %}" class="text-muted text-decoration-none small d-inline-block mb-3">Kembali</a>
+
+        <div class="bg-white border rounded-3 p-4" style="border-color: #E2D9CC !important;">
+
+            <div class="d-flex justify-content-between align-items-start mb-3">
+                <span class="badge-genre">{{ book.get_genre_display }}</span>
+                <small class="text-muted">{{ book.created_at|date:"d M Y" }}</small>
+            </div>
+
+            <h1 class="h4 fw-bold mb-1">{{ book.title }}</h1>
+            <p class="text-muted fst-italic mb-4">{{ book.author }}</p>
+
+            <p class="text-muted small text-uppercase fw-semibold mb-2" style="letter-spacing: 0.1em;">Review</p>
+            <div class="review-box">{{ book.review|linebreaks }}</div>
+
+            <div class="d-flex gap-2 mt-4 pt-3 border-top">
+                <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary btn-sm">Kembali</a>
+                <!-- Tombol Hapus: buka modal popup -->
+                <button type="button" class="btn btn-outline-danger btn-sm ms-auto"
+                        data-bs-toggle="modal" data-bs-target="#modalHapus">
+                    Hapus
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal Konfirmasi Hapus -->
+<div class="modal fade" id="modalHapus" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content text-center p-3">
+            <p class="fw-semibold mb-4">Yakin ingin menghapus novel ini?</p>
+            <div class="d-flex justify-content-center gap-2">
+                <form method="POST" action="{% url 'delete_book' book.pk %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger px-4">Ya, Hapus</button>
+                </form>
+                <button type="button" class="btn btn-outline-secondary px-4"
+                        data-bs-dismiss="modal">Batal</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

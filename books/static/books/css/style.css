@@ -1,0 +1,176 @@
+/* =============================================
+   NovelShelf - Custom CSS
+   Bootstrap 5 dipakai sebagai base
+   ============================================= */
+
+:root {
+    --bg: #F7F4EF;
+    --dark: #1A1410;
+    --brown: #7B4F2E;
+    --amber: #C8860A;
+    --muted: #8A7A6A;
+    --border: #E2D9CC;
+    --white: #FFFFFF;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--dark);
+}
+
+/* ── Navbar ─────────────────────────── */
+.navbar {
+    background-color: var(--dark) !important;
+}
+
+.navbar-brand {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #F7F4EF !important;
+    letter-spacing: 0.3px;
+}
+
+.navbar-brand .highlight {
+    color: var(--amber);
+}
+
+.navbar .nav-link,
+.navbar .navbar-text {
+    color: #B5A898 !important;
+    font-size: 0.875rem;
+}
+
+.navbar .nav-link:hover {
+    color: #F7F4EF !important;
+}
+
+/* ── Cards ──────────────────────────── */
+.book-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+
+.book-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    border-color: var(--brown);
+    color: inherit;
+}
+
+.book-card .book-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+    color: var(--dark);
+}
+
+.book-card .book-author {
+    font-size: 0.83rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.book-card .book-preview {
+    font-size: 0.82rem;
+    color: #6E6055;
+    line-height: 1.55;
+    /* Batasi teks preview 3 baris */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ── Genre Badge ─────────────────────── */
+.badge-genre {
+    display: inline-block;
+    background-color: #FEF3D8;
+    color: var(--amber);
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding: 3px 9px;
+    border-radius: 20px;
+    border: 1px solid #F0D99A;
+    margin-bottom: 8px;
+}
+
+/* ── Auth Card ───────────────────────── */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background-color: var(--bg);
+}
+
+.auth-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 2.5rem 2rem;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+}
+
+.auth-logo {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.auth-logo .highlight {
+    color: var(--amber);
+}
+
+/* ── Buttons ─────────────────────────── */
+.btn-primary {
+    background-color: var(--dark);
+    border-color: var(--dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--brown);
+    border-color: var(--brown);
+}
+
+/* ── Form focus ─────────────────────── */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--brown);
+    box-shadow: 0 0 0 3px rgba(123, 79, 46, 0.15);
+}
+
+/* ── Review Box ─────────────────────── */
+.review-box {
+    background: #FFFDF7;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--amber);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    line-height: 1.75;
+    font-size: 0.95rem;
+    color: #3A302A;
+}
+
+/* ── Empty State ────────────────────── */
+.empty-state {
+    text-align: center;
+    padding: 5rem 1rem;
+    color: var(--muted);
+}
+
+.empty-state .icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
