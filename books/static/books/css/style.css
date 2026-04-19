@@ -1,9 +1,9 @@
 :root {
-    --bg:     #F7F4EF;
-    --dark:   #1A1410;
-    --brown:  #7B4F2E;
-    --amber:  #C8860A;
-    --muted:  #8A7A6A;
+    --bg:     #F5EFEB;
+    --dark:   #2F4156;
+    --brown:  #567C8D;
+    --amber:  #2F4156;
+    --muted:  #8a6a80;
     --border: #E2D9CC;
 }
 
@@ -20,7 +20,7 @@ body {
 .badge-genre {
     display: inline-block;
     align-self: flex-start;
-    background-color: #FEF3D8;
+    background-color: #C8D9E6;
     color: var(--amber);
     font-size: 0.68rem;
     font-weight: 700;
@@ -28,7 +28,7 @@ body {
     letter-spacing: 0.07em;
     padding: 3px 9px;
     border-radius: 20px;
-    border: 1px solid #F0D99A;
+    border: 1px solid #2F4156;
     margin-bottom: 8px;
 }
 
@@ -83,6 +83,7 @@ body {
 
 .btn-primary { background-color: var(--dark); border-color: var(--dark); }
 .btn-primary:hover { background-color: var(--brown); border-color: var(--brown); }
+.btn-primary:active { background-color: #1e2d3d; border-color: #1e2d3d; }
 
 .form-control:focus, .form-select:focus {
     border-color: var(--brown);
@@ -90,7 +91,7 @@ body {
 }
 
 .review-box {
-    background: #FFFDF7;
+    background: #F5EFEB;
     border: 1px solid var(--border);
     border-left: 4px solid var(--amber);
     border-radius: 8px;
