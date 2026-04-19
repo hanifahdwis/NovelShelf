@@ -15,7 +15,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'books',  # app kita
+    'books',  
 ]
 
 MIDDLEWARE = [
@@ -34,7 +34,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
-        'APP_DIRS': True,  # Django otomatis cari folder templates/ di tiap app
+        'APP_DIRS': True,  
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -55,7 +55,6 @@ DATABASES = {
     }
 }
 
-# Password validation dikosongkan biar lebih gampang waktu development
 AUTH_PASSWORD_VALIDATORS = []
 
 LANGUAGE_CODE = 'id'
@@ -67,9 +66,6 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Setelah login, redirect ke halaman utama
 LOGIN_REDIRECT_URL = '/'
-# Kalau belum login dan akses halaman protected, redirect ke login
 LOGIN_URL = '/login/'
-# Setelah logout, redirect ke halaman login
 LOGOUT_REDIRECT_URL = '/login/'

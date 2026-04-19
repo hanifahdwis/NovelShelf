@@ -6,11 +6,6 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from .models import BookReview
 from .forms import BookReviewForm
 
-
-# ─────────────────────────────────────────────
-#  AUTH VIEWS
-# ─────────────────────────────────────────────
-
 def login_view(request):
     if request.user.is_authenticated:
         return redirect('dashboard')
@@ -46,10 +41,6 @@ def logout_view(request):
     logout(request)
     return redirect('login')
 
-
-# ─────────────────────────────────────────────
-#  BOOK VIEWS
-# ─────────────────────────────────────────────
 
 @login_required
 def dashboard(request):

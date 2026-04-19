@@ -5,7 +5,6 @@ from .models import BookReview
 class BookReviewForm(forms.ModelForm):
     class Meta:
         model = BookReview
-        # Field yang muncul di form (user tidak perlu diisi manual)
         fields = ['title', 'author', 'genre', 'review']
         widgets = {
             'title': forms.TextInput(attrs={

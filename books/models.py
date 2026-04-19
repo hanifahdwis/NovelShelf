@@ -19,8 +19,6 @@ GENRE_CHOICES = [
 
 
 class BookReview(models.Model):
-    # Foreign Key ke User bawaan Django
-    # Kalau user dihapus, semua review-nya ikut terhapus (CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     title = models.CharField(max_length=255, verbose_name='Judul Novel')
@@ -35,7 +33,6 @@ class BookReview(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        # Urutkan dari yang terbaru
         ordering = ['-created_at']
 
     def __str__(self):
