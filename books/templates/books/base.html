@@ -12,7 +12,7 @@
 
 <nav class="navbar navbar-expand-sm px-3">
     <div class="container-lg">
-        <a class="navbar-brand" href="{% url 'dashboard' %}">NovelShelf</a>
+        <a class="navbar-brand" href="{% url 'dashboard' %}">ReadMark</a>
         {% if user.is_authenticated %}
         <div class="d-flex align-items-center gap-3 ms-auto">
             <span class="text-white">{{ user.username }}</span>
