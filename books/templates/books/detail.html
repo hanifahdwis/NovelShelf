@@ -5,7 +5,7 @@
 <div class="row justify-content-center">
     <div class="col-12 col-md-8 col-lg-7">
 
-        <a href="{% url 'dashboard' %}" class="text-muted text-decoration-none small d-inline-block mb-3">Kembali</a>
+        <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary btn-sm mb-3">← Kembali</a>
 
         <div class="bg-white border rounded-3 p-4" style="border-color: #E2D9CC !important;">
 
@@ -20,9 +20,8 @@
             <p class="text-muted small text-uppercase fw-semibold mb-2" style="letter-spacing: 0.1em;">Review</p>
             <div class="review-box">{{ book.review|linebreaks }}</div>
 
-            <div class="d-flex gap-2 mt-4 pt-3 border-top">
-                <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary btn-sm">Kembali</a>
-                <button type="button" class="btn btn-outline-danger btn-sm ms-auto"
+            <div class="d-flex justify-content-end mt-4 pt-3 border-top">
+                <button type="button" class="btn btn-outline-danger btn-sm"
                         data-bs-toggle="modal" data-bs-target="#modalHapus">
                     Hapus
                 </button>
@@ -32,6 +31,7 @@
     </div>
 </div>
 
+<!-- Modal Konfirmasi Hapus -->
 <div class="modal fade" id="modalHapus" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-sm">
         <div class="modal-content text-center p-3">

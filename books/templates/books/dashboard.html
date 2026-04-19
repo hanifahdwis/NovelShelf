@@ -15,7 +15,8 @@
 <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
     {% for book in books %}
     <div class="col">
-        <a href="{% url 'book_detail' book.pk %}" class="book-card">
+        {# h-100 di sini supaya semua card dalam satu baris punya tinggi sama #}
+        <a href="{% url 'book_detail' book.pk %}" class="book-card h-100">
             <span class="badge-genre">{{ book.get_genre_display }}</span>
             <div class="book-title">{{ book.title }}</div>
             <div class="book-author">{{ book.author }}</div>

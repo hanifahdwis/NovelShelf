@@ -15,9 +15,8 @@
         <a class="navbar-brand" href="{% url 'dashboard' %}">NovelShelf</a>
         {% if user.is_authenticated %}
         <div class="d-flex align-items-center gap-3 ms-auto">
-            <span class="navbar-text d-none d-sm-inline">{{ user.username }}</span>
-            <a href="{% url 'add_book' %}" class="btn btn-warning btn-sm fw-semibold">Tambah</a>
-            <a href="{% url 'logout' %}" class="nav-link">Logout</a>
+            <span class="text-white">{{ user.username }}</span>
+            <a href="{% url 'logout' %}" class="btn btn-outline-light btn-sm">Logout</a>
         </div>
         {% endif %}
     </div>
